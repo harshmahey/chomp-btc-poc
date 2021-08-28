@@ -15,8 +15,18 @@ $ npm install
 # development
 $ npm run start
 
-# watch mode
-$ npm run start:dev
+# Start offline
+$ sls offline start
+or 
+$ npm run offline
+
+# Deploy to server
+$ sls deploy -v
+or
+$ npm run deploy
+
+# watch logs for main
+$ sls logs -f main
 
 # production mode
 $ npm run start:prod
