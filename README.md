@@ -56,3 +56,10 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+
+> TODO
+* Add Swagger
+* Improvement in error handling specially response to customer.
+* E2E test case
+
