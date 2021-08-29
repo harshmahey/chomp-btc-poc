@@ -2,7 +2,7 @@
 
 [CHOMP-BTC-POC](https://github.com/harshmahey/chomp-btc-poc) is a sample application created as a NEST POC.
 ### [Reference Link followed.](https://nishabe.medium.com/nestjs-serverless-lambda-aws-in-shortest-steps-e914300faed5)
-
+### [NestJS Documentation](https://docs.nestjs.com/)
 ## Installation
 
 ```bash
@@ -28,8 +28,8 @@ $ npm run deploy
 # watch logs for main
 $ sls logs -f main
 
-# production mode
-$ npm run start:prod
+# Clean up generated files
+$ npm run cleanup
 ```
 
 ## Test

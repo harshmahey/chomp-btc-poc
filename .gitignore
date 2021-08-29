@@ -26,3 +26,4 @@ package-lock.json
 .serverless/
 dist/
 .build/
+coverage/
