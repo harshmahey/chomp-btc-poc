@@ -1,7 +1,7 @@
 import { Res } from '@nestjs/common';
 import { Test, TestingModule } from '@nestjs/testing';
-import { TradeService } from './trade.service';
-import { ApiService } from './api.service';
+import { TradeService } from '../src/trade/trade.service';
+import { ApiService } from '../src/trade/api.service';
 
 
 class ApiServiceMock {
@@ -37,23 +37,10 @@ describe('TradeService', () => {
     tradeService = app.get<TradeService>(TradeService);
   });
 
-  beforeEach(async () => {
-    process.env.SUPPORTED_TOKENS = 'BTC, ETH';
-    process.env.BTC = 'bitcoin';
-    process.env.ETH = 'ethereum';
-    process.env.ERR_ASSETID_MISSING_MSG = 'asset should be either BTC or ETH, not empty.';
-    process.env.ERR_NOTSUPPORTED_ASSETID_MSG = 'This asset is not supported';
-
-  });
-
-
-
-
   describe('getAssetValue', () => {
     it('should return 123 as price', async () => {
       const coinName = "BTC";
       let assetVal = await tradeService.getAssetValue(coinName);
-      console.log(JSON.stringify(assetVal));
       expect(assetVal.value).toEqual("123.0");
     });
   });
